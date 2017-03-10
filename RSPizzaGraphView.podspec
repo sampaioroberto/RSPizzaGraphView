@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RSPizzaGraphView"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "A nice pizza graph."
   
   s.description  = <<-DESC
@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
 
   s.license   = "MIT"
   s.author    = "Roberto Sampaio"
-  s.homepage  = "https://github.com/sampaioroberto"
+  s.homepage  = "https://github.com/sampaioroberto/RSPizzaGraphView"
 
   s.platform     = :ios, "10.0"
 
-  s.source = { :git => 'https://github.com/sampaioroberto/RSPizzaGraphView.git', :tag => "1.0.0" }
+  s.source = { :git => 'https://github.com/sampaioroberto/RSPizzaGraphView.git', :tag => "1.0.1" }
 
   s.source_files  = "RSPizzaGraphView", "RSPizzaGraphView/**/*.{h,m,swift}"
 
