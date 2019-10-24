@@ -113,7 +113,7 @@ public class RSPizzaGraphView: UIView {
             animation.fromValue = 0
             animation.toValue = 1
             animation.isRemovedOnCompletion = false
-            animation.fillMode = .forwards
+            animation.fillMode = CAMediaTimingFillMode.forwards
             
             animation.beginTime = CACurrentMediaTime() + beginTime
             sliceLayer.add(animation, forKey: "circularAnimation")
@@ -128,8 +128,8 @@ public class RSPizzaGraphView: UIView {
         animation.fromValue = 0
         animation.toValue = 1
         animation.isRemovedOnCompletion = false
-        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        animation.fillMode = .forwards
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.duration = 1.0
         
         borderLayer.add(animation, forKey: "strokeStart")
