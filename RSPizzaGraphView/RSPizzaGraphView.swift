@@ -25,7 +25,7 @@ public struct RSPizzaGraph {
 
 public class RSPizzaGraphView: UIView {
     
-    private var startAngle: CGFloat = CGFloat(2 * M_PI * -0.25)
+    private var startAngle: CGFloat = CGFloat(2 * Double.pi * -0.25)
     private var endAngle: CGFloat = 0.0
     
     private var graphs: [RSPizzaGraph]?
@@ -113,7 +113,7 @@ public class RSPizzaGraphView: UIView {
             animation.fromValue = 0
             animation.toValue = 1
             animation.isRemovedOnCompletion = false
-            animation.fillMode = kCAFillModeForwards
+            animation.fillMode = .forwards
             
             animation.beginTime = CACurrentMediaTime() + beginTime
             sliceLayer.add(animation, forKey: "circularAnimation")
@@ -128,8 +128,8 @@ public class RSPizzaGraphView: UIView {
         animation.fromValue = 0
         animation.toValue = 1
         animation.isRemovedOnCompletion = false
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        animation.fillMode = kCAFillModeForwards
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        animation.fillMode = .forwards
         animation.duration = 1.0
         
         borderLayer.add(animation, forKey: "strokeStart")
@@ -188,7 +188,7 @@ public class RSPizzaGraphView: UIView {
         let center = CGPoint(x: rect.size.width/2, y: rect.size.height/2)
         let cornerRadius = rect.size.width/2
         
-        endAngle = CGFloat(startAngle + CGFloat(2 * M_PI * percent))
+        endAngle = CGFloat(startAngle + CGFloat(2 * Double.pi * percent))
         
         let path = UIBezierPath(arcCenter: center, radius: cornerRadius, startAngle: CGFloat(startAngle), endAngle: endAngle, clockwise: true)
         let layer = CAShapeLayer()
